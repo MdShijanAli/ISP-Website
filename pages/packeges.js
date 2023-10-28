@@ -6,8 +6,8 @@ document.getElementById("currentYear").textContent = currentYear;
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch and populate divisions
-  const divisionSelect = document.getElementById('division');
-  fetch('divisions.json')
+  const divisionSelect = document.getElementById('pdivision');
+  fetch('../public/divisions.json')
     .then(response => response.json())
     .then(data => {
       data[2].data.forEach(division => {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Event listener for District select
-  const districtSelect = document.getElementById('district');
+  const districtSelect = document.getElementById('pdistrict');
 
   
   divisionSelect.addEventListener('change', function () {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     
     // Fetch and populate districts based on the selected division
-    fetch('districts.json')
+    fetch('../public/districts.json')
       .then(response => response.json())
       .then(data => {
         const matchingDistricts = data[2].data.filter(district => district.division_id === divisionID);
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     
     // Event listener for Upazila select
-    const upazilaSelect = document.getElementById('upazila');
+    const upazilaSelect = document.getElementById('pupazila');
 
   
     districtSelect.addEventListener('change', function () {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     
       // Fetch and populate upazilas based on the selected division
-      fetch('upazilas.json')
+      fetch('../public/upazilas.json')
         .then(response => response.json())
         .then(data => {
           const matchingupazilas = data[2].data.filter(upazila => upazila.district_id === districtD);
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       
       // Event listener for union select
-      const unionSelect = document.getElementById('union');
+      const unionSelect = document.getElementById('punion');
 
   
       upazilaSelect.addEventListener('change', function () {
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     
         // Fetch and populate unions based on the selected division
-        fetch('unions.json')
+        fetch('../public/unions.json')
           .then(response => response.json())
           .then(data => {
             const matchingUnions = data[2].data.filter(union => union.upazilla_id === upazillaID);

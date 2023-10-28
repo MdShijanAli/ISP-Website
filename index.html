@@ -2,176 +2,871 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image" href="./images/favicon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ISP Website</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Home | ISP Website</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+  rel="stylesheet"/>
   </head>
   <body>
-    <div class="">
+   
     <!-- Header Top -->
-    <div class="bg-sky-500">
-      <div class="mx-auto w-full xl:container p-2 text-white">
-       <a href="#">
-        <p class="text-right font-semibold">BRTC Approved Tarif</p>
+    <div class="bg-secondary">
+      <div class="mx-auto max-w-7xl px-6 py-2 ">
+       <a href="https://www.link3.net/BTRC_Approved_Tariff.pdf" target="_blank">
+        <p class="text-right text-white font-semibold">BRTC Approved Tarif</p>
        </a>
       </div>
     </div>
 
-    <!-- Header -->
-   
+<!-- Header -->
 <nav class="bg-white shadow-md">
-  <div class=" w-full xl:container flex flex-wrap items-center justify-between mx-auto p-2 ">
-  <div class="w-[80px]">
-    <a href="https://flowbite.com/" class="flex items-center">
-      <img src="./images/logo.png" class="h-full mr-3" alt="Flowbite Logo">
+  <div class="max-w-7xl mx-auto px-6  py-1 flex  items-center justify-between ">
+    <div class="lg:flex items-center justify-between w-full">
+          <div class="w-[150px]">
+            <a href="/" class="flex items-center">
+              <img src="../images/logo.png" class="h-full w-full mr-3" alt="Logo">
+          </a>
+          </div>
+  
+          <div class="hidden w-full lg:flex lg:w-auto" id="navbar-sticky">
+            <ul class="flex lg:gap-8 lg:items-center flex-col lg:flex-row md:mt-0 p-4 md:p-0 mt-4 font-semibold text-secondary border border-gray-100 rounded-lg bg-gray-50 md:border-0 md:bg-white">
+                <a href="/"><li class="my-3 pb-1 menu-item lg:my-0">Home </li></a>
+                <a href="./pages/packeges.html"><li class="my-3 pb-1 menu-item lg:my-0">Packages</li></a>
+                <a href="./pages/about-us.html"> <li class="my-3 pb-1 menu-item lg:my-0">About Us</li></a>
+                <a href="./pages/pay-bill.html"> <li class="my-3 pb-1 menu-item lg:my-0">Pay Bill</li></a>
+                <a href="./pages/coverage.html"><li class="my-3 pb-1 menu-item lg:my-0">Coverage</li></a>
+                <a href="./pages/ftp-server.html"> <li class="my-3 pb-1 menu-item lg:my-0">FTP Server</li></a>
+                <a href="./pages/contact.html"><li class="my-3 pb-1 menu-item lg:my-0">Contact Us</li></a>
+                <a href="./pages/self-care.html">
+                    <button type="button" class="lg:w-28 h-10 w-full rounded-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white mt-5 lg:mt-0"> <li class="">Self Care</li></button>
+                </a>
+        
+            </ul>
+          </div>
+    </div>
+
+<!-- drawer init and show -->
+<div class="text-center">
+  <button class="inline-flex md:hidden items-center p-2 w-10 h-10 justify-center text-sm text-secondary rounded-lg  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  " type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+    <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+  </svg>
+  </button>
+</div>
+<!-- drawer component -->
+<div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+  <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+    </svg>
+    <span class="sr-only">Close menu</span>
+ </button>
+  <div class="w-[150px] mx-auto">
+    <a href="/" class="flex items-center">
+      <img src="../images/logo.png" class="h-full w-full mr-3" alt="Flowbite Logo">
   </a>
   </div>
-  <div class="flex">
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-  </div>
-  <div class="hidden w-full md:flex md:w-auto" id="navbar-sticky">
-    <ul class="flex flex-col p-4 md:p-0 mt-4 font-semibold text-sky-600 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white ">
-      <li class="border-transparent pb-3 menu-item">
-        <a href="/">Home</a>
-      </li>
-      <li class="border-transparent pb-3 menu-item">
-        <a href="/packages">Packages</a>
-      </li>
-      <li class="border-transparent pb-3 menu-item">
-        <a href="/business">Business</a>
-      </li>
-      <li class="border-transparent pb-3 menu-item">
-        <a href="about-us">About Us</a>
-      </li>
-      <li class="border-transparent pb-3 menu-item">
-        <a href="/pay-bill">Pay Bill</a>
-      </li>
-      <li class="border-transparent pb-3 menu-item">
-        <a href="/blog">Blog</a>
-      </li>
-      <li class="border-transparent pb-3 menu-item">
-        <a href="/contact-us">Contact Us</a>
-      </li>
-      <li class="">
-        <a href="#">
-            <button type="button" class="px-5 py-2 rounded-full bg-sky-500 text-white mt-5 md:mt-0 w-full">Self Care</button>
-        </a>
-      </li>
-    </ul>
-  </div>
+  <ul class="flex lg:gap-8 lg:items-center flex-col lg:flex-row md:mt-0 py-4 md:p-0 mt-4 font-semibold text-secondary rounded-lg  md:border-0 md:bg-white">
+    <a href="/"><li class="my-3 pb-1 menu-item lg:my-0">Home </li></a>
+    <a href="./pages/packeges.html"><li class="my-3 pb-1 menu-item lg:my-0">Packages</li></a>
+    <a href="./pages/about-us.html"> <li class="my-3 pb-1 menu-item lg:my-0">About Us</li></a>
+    <a href="./pages/pay-bill.html"> <li class="my-3 pb-1 menu-item lg:my-0">Pay Bill</li></a>
+    <a href="./pages/coverage.html"><li class="my-3 pb-1 menu-item lg:my-0">Coverage</li></a>
+    <a href="./pages/ftp-server.html"> <li class="my-3 pb-1 menu-item lg:my-0">FTP Server</li></a>
+    <a href="./pages/contact.html"><li class="my-3 pb-1 menu-item lg:my-0">Contact Us</li></a>
+    <a href="./pages/self-care.html">
+        <button type="button" class="lg:w-28 h-10 w-full rounded-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white mt-5 lg:mt-0"> <li class="">Self Care</li></button>
+    </a>
+</ul>
+</div>
   </div>
 </nav>
 
-    
-    
-    
+    <!-- Home Page content -->
 
+    <!-- hero section -->
 
-
-
-<!-- Footer -->
-<div class="bg-sky-500 text-white py-16">
-  <div class="mx-auto w-full xl:container px-6">
-     <div class="grid md:grid-cols-6 grid-cols-2 gap-5 md:gap-0">
-         <div class="col-span-1">
-          <h1 class="text-xl font-semibold uppercase">Company</h1>
-          <div class="mt-5">
-            <ul>
-              <li class="my-2"><a href="#">About Us</a></li>
-              <li class="my-2"><a href="#">Pricing</a></li>
-              <li class="my-2"><a href="#">Coverage Area</a></li>
-              <li class="my-2"><a href="#">Bill Payment</a></li>
-            </ul>
+    <section class="hidden md:flex md:items-center w-full h-screen bg-cover" style="background-image: url('./images/banner-big.jpg'); background-repeat: no-repeat; background-position: center;">
+      <div class="max-w-7xl mx-auto px-6 md:justify-center">
+          <div class="grid gap-20 grid-cols-2">
+              <div class="mr-auto col-span-1">
+                  <div class="flex flex-col h-full justify-center">
+                      <h1 class="max-w-2xl xl:text-6xl  md:text-4xl mb-4 font-bold tracking-wide leading-none text-white">Tihan Online</h1>
+                      <p style="line-height: 1.85em;" class="max-w-2xl xl:text-xl  md:text-lg mb-6 font-light text-white lg:mb-8 text-justify">Best internet service provider in Dinajpur which provides fully dedicated, super fast, cost-effective, secured internet connection. We’re promised to meeting your needs and delivering industry-leading customer service.</p>
+  
+                      <a href="./pages/packeges.html" >
+                          <button class="md:w-40 h-10 rounded-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white">Get Started</button>
+                      </a>
+                  </div>
+              </div>
           </div>
-         </div>
-         <div class="col-span-1">
-          <h1 class="text-xl font-semibold uppercase">support</h1>
-          <div class="mt-5">
-            <ul>
-              <li class="my-2"><a href="#">How to Pay</a></li>
-              <li class="my-2"><a href="#">Self-care</a></li>
-              <li class="my-2"><a href="#">Articles</a></li>
-              <li class="my-2"><a href="#">Contact us</a></li>
-            </ul>
+      </div>
+  </section>
+  
+  
+
+    <section class="md:hidden" style="background-image: url('./images/banner-small.jpg');  background-repeat: no-repeat; background-size: cover;">
+      <div class=" mx-auto px-6 h-1/2">
+        <div class="pt-10 pb-96">
+          <h1 class="max-w-2xl mb-4 text-4xl font-bold tracking-wide leading-none md:text-5xl xl:text-6xl text-white">Tihan Online.</h1>
+          <p class="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl text-justify">Best internet service provider in Dinajpur which provides fully dedicated, super fast, cost-effective, secured internet connection. We’re promised to meeting your needs and delivering industry-leading customer service.</p>
+         
+          <a href="./pages/packeges.html" class="px-10 py-3 rounded-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white">
+              Get Start
+          </a> 
+      </div>            
+      </div>
+  </section>
+
+
+  <!-- call to action -->
+
+  <div class="md:pt-20">
+    <div class="grid md:grid-cols-2 md:gap-20 gap-10 items-center mx-auto max-w-7xl px-6 md:pb-20 pt-20 md:pt-0">
+      <div class="order-last md:order-first">
+        <h2 class="text-h2 font-semibold">Tihan Online for Home</h2>
+        <p class="mt-4 text-base tracking-wide text-gray-800 text-justify">Experience the finest home internet with nation's largest and no. 1 fiber broadband. From streaming to working from home, and gaming to video calls, Tihan delivers the fastest and most reliable service.</p>
+        <ul class="list-disc list-inside my-5 text-base tracking-wide text-gray-800 font-semibold">
+          <li>Upto 100 Mbps Unlimited Internet Package</li>
+          <li class="my-2">4K YouTube, Facebook Streaming</li>
+          <li>Lag Free, Low Latency Network</li>
+        </ul>
+        <a href="./pages/packeges.html" class="inline-flex px-5 py-2 font-semibold rounded-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white">
+          Explore More
+      </a> 
+      </div>
+      <div>
+        <img class="w-full rounded-lg" src="./images/home.jpg" alt="">
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 md:gap-20 gap-10 mt-20 md:mt-0 items-center mx-auto max-w-7xl px-6 pb-20">
+      <div class="">
+        <img class="w-full rounded-lg" src="./images/office.jpg" alt="">
+      </div>
+      <div>
+        <h1 class="text-h2 font-semibold">Tihan Online for Enterprise</h1>
+        <p class="mt-4 text-base tracking-wide text-gray-800 text-justify">Designed for Medium and Large Enterprises, Carnival delivers lightning-fast speeds, unwavering reliability, 24/7 support, and everything else your business needs to stay seamlessly connected.</p>
+        <ul class="list-disc list-inside my-5 text-base tracking-wide text-gray-800 font-semibold">
+          <li>Complete Suite of Services</li>
+          <li class="my-2">Reliable, secure, cost-effective</li>
+          <li>Widest Reach: Connect Anywhere, Anytime</li>
+        </ul>
+        <a href="./pages/packeges.html" class="inline-flex px-5 py-2 font-semibold rounded-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white">
+          Explore More
+      </a> 
+      </div>
+    </div>
+  </div>
+
+  
+   <!-- service and solution section -->
+
+  <div class="bg-background">
+    <div class="mx-auto max-w-7xl px-6 py-20">
+      <div class="mb-10 text-center">
+        <h1 class="md:text-h1 text-2xl font-bold mb-3">Services & Solutions</h1>
+        <p class="text-third  font-medium md:text-h3 text-md my-5">Join today to take advantage of Tihan Online's great features.</p>
+      </div>
+      <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+        <div class="relative group">
+        <div class="bg-primary rounded-xl backCardRadius h-80 group-hover:-rotate-3 transition duration-500"></div>
+        <div class="bg-white rounded-xl shadow-md p-5 w-full h-full absolute top-0 ">
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-16 h-16 text-primary">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+            </p>
+            <h3 class="text-h3 tracking-wide font-semibold mt-5">Home Broadband Internet</h3>
+            <p class="text-base tracking-wide text-gray-800 mt-2 break-all text-justify">Tihan Online is providing one of the fastest broadband internet and network solutions throughout Dhaka, reliable for both gamers and regular users.</p>
           </div>
-         </div>
-         <div class="col-span-1">
-          <h1 class="text-xl font-semibold uppercase">quick links</h1>
-          <div class="mt-5">
-            <ul>
-              <li class="my-2"><a href="#">Join Group</a></li>
-              <li class="my-2"><a href="#">Like our Page</a></li>
+        </div>
+        <div class="relative group">
+          <div class="bg-primary rounded-xl backCardRadius h-80 group-hover:-rotate-3 transition duration-500"></div>
+          <div class="bg-white rounded-xl shadow-md p-5 w-full h-full absolute top-0">
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </p>
+            <h3 class="text-h3 tracking-wide font-semibold mt-5">Network Security</h3>
+            <p class="text-base tracking-wide text-gray-800 mt-2 break-all text-justify">Tihan Online provides VPN, Antivirus, CCTV IP surveillance solutions ensuring top of the line security to your end.</p>
+        </div>
+        </div>
+        <div class="relative group">
+          <div class="bg-primary rounded-xl backCardRadius h-80 group-hover:-rotate-3 transition duration-500"></div>
+          <div class="bg-white rounded-xl shadow-md p-5 w-full h-full absolute top-0">
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </p>
+            <h3 class="text-h3 tracking-wide font-semibold mt-5">Corporate/SME Internet</h3>
+            <p class="text-base tracking-wide text-gray-800 mt-2 break-all text-justify">Offering dedicated internet connection with various network solutions ensuring network stability for our Corporate and SME consumers. Along with a support manager for 24/7 response.</p>
+        </div>
+        </div>
+        <div class="relative group">
+          <div class="bg-primary rounded-xl backCardRadius h-80 group-hover:-rotate-3 transition duration-500"></div>
+          <div class="bg-white rounded-xl shadow-md p-5 w-full h-full absolute top-0">
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+            </svg>
+          </p>
+            <h3 class="text-h3 tracking-wide font-semibold mt-5">Dedicated Server Hosting</h3>
+            <p class="text-base tracking-wide text-gray-800 mt-2 break-all text-justify">Get a dedicated server hosted on your end to complete your daily needs with efficient network routing and configuration.</p>
+        </div>
+        </div>
+        <div class="relative group">
+          <div class="bg-primary rounded-xl backCardRadius h-80 group-hover:-rotate-3 transition duration-500"></div>
+          <div class="bg-white rounded-xl shadow-md p-5 w-full h-full absolute top-0">
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+          </p>
+            <h3 class="text-h3 tracking-wide font-semibold mt-5">Network Solutions</h3>
+            <p class="text-base tracking-wide text-gray-800 mt-2 break-all text-justify">Tihan Online provides both LAN & WAN networks solutions. With the help of our experienced network engineers, we ensure the most efficient Network solutions for our clients.</p>
+        </div>
+        </div>
+        <div class="relative group">
+          <div class="bg-primary rounded-xl backCardRadius h-80 group-hover:-rotate-3 transition duration-500"></div>
+          <div class="bg-white rounded-xl shadow-md p-5 w-full h-full absolute top-0">
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        </p>
+            <h3 class="text-h3 tracking-wide font-semibold mt-5">CCTV System Solutions</h3>
+            <p class="text-base tracking-wide text-gray-800 mt-2 break-all text-justify">Tihan Online provides high end CCTV and IP surveillance solutions to residential, commercial, and industrial customers in Bangladesh.</p>
+        </div>
+        </div>
+        <div class="relative group">
+          <div class="bg-primary rounded-xl backCardRadius h-80 group-hover:-rotate-3 transition duration-500"></div>
+          <div class="bg-white rounded-xl shadow-md p-5 w-full h-full absolute top-0">
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+          </p>
+            <h3 class="text-h3 tracking-wide font-semibold mt-5">Data Connectivity</h3>
+            <p class="text-base tracking-wide text-gray-800 mt-2 break-all text-justify">Tihan Online offers various solutions for Data connectivity. Keeping our system updated with the latest technologies, we ensure the most efficient data connectivity solutions for our clients.</p>
+        </div>
+        </div>
+        <div class="relative group">
+          <div class="bg-primary rounded-xl backCardRadius h-80 group-hover:-rotate-3 transition duration-500"></div>
+          <div class="bg-white rounded-xl shadow-md p-5 w-full h-full absolute top-0">
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+          </p>
+            <h3 class="text-h3 tracking-wide font-semibold mt-5">Dedicated Internet</h3>
+            <p class="text-base tracking-wide text-gray-800 mt-2 break-all text-justify">Dedicated high-speed internet connectivity with multiple upstream support and multiple backup links to ensure 99.9% uptime.</p>
+        </div>
+       </div>
+      </div>
+    </div>
+  
+  </div>
+
+
+
+
+  <!-- packeges section -->
+
+  
+
+
+
+<section class="bg-background">
+  <div class="max-w-7xl mx-auto px-6  ">
+    <div class="text-center">
+      <h1 class="md:text-h1 text-2xl font-bold text-secondary">Most Popular Packages </h1>
+    <p class="text-third  font-medium md:text-h3 text-md my-5">Choose The Best Package That Suits You</p>
+    <a href="./pages/packeges.html" class="inline-flex px-5 py-2 font-semibold rounded-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white capitalize">
+      see all packeges
+  </a> 
+  </div>
+  
+
+  <div class="relative glide-08 mt-10 overflow-hidden">
+    <!-- Slides -->
+    <div data-glide-el="track">
+        <ul class="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex  overflow-hidden p-0 pb-12">
+            <li>
+                <div class="w-full h-full">
+                    <!-- Start Testimonial -->
+                    <div class="relative shadow-2xl rounded-lg bg-white">
+                      <div class="p-5">
+                        <h2 class="text-h2 my-2 border-b-[4px] border-blue-800 w-[120px] text-center mx-auto border-dashed text-blue-800 font-semibold ">8 Mbps</h2>
+                      </div>
+            
+                      <div class="px-5 pb-36">
+                          <div class="text-center">
+                            <p class="flex items-center gap-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>                                  
+                              <span class="text-gray-500">Multi-device streaming</span>
+                            </p>
+                            <p class="flex items-center gap-5 my-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>                                  
+                              <span class="text-gray-500">Download shows quickly</span>
+                            </p>
+                            <p class="flex items-center gap-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 18L18 6M6 6l12 12"/>
+                              </svg>                                                    
+                              <span class="text-gray-500">Download large files</span>
+                            </p>
+                            <p class="flex items-center gap-5 my-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 18L18 6M6 6l12 12"/>
+                              </svg> 
+                              <span class="text-blue-800 font-semibold">Unlimited:</span>                                 
+                              <span class="text-gray-500 flex gap-3">
+                                <img class="w-8" src="../images/facebook.png" alt="">
+                                <img class="w-8" src="../images/youtube.png" alt="">
+                              </span>
+                            </p>
+                       
+                    
+                          </div>
+                        </div>
+                        <div class="absolute bottom-0 w-full">
+                          <div class="text-gray-200 bg-secondary mx-10 py-1 text-center rounded-t-xl">
+                            <span class="font-bold text-h2"> 500 </span>
+                            <span>Tk / Month</span>
+                          </div>
+                       
+                       
+                          <div data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"  class="p-5 cursor-pointer bg-blue-800 rounded-b-lg">
+                            <h2 class="text-h3 tracking-[.15em] text-center  text-white"> Select Basic</h2>
+                          </div>
+                       
+                        </div>
+                    </div>
+                    <!-- End Testimonial -->
+                </div>
+            </li>
+            <li>
+                <div class="w-full h-full">
+                    <!-- Start PACKEGE -->
+                    <div class="relative shadow-2xl rounded-lg bg-white">
+                      <div class="p-5">
+                        <h2 class="text-h2 my-2 border-b-[4px] border-red-600 w-[120px] text-center mx-auto border-dashed text-red-600 font-semibold ">15 Mbps</h2>
+                      </div>
+            
+                      <div class="px-5 pb-36">
+                          <div class="text-center">
+                            <p class="flex items-center gap-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>                                  
+                              <span class="text-gray-500">Multi-device streaming</span>
+                            </p>
+                            <p class="flex items-center gap-5 my-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>                                  
+                              <span class="text-gray-500">Download shows quickly</span>
+                            </p>
+                            <p class="flex items-center gap-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 18L18 6M6 6l12 12"/>
+                              </svg>                                  
+                              <span class="text-gray-500">Download large files</span>
+                            </p>
+                            <p class="flex items-center gap-5 my-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>  
+                              <span class="text-red-600 font-semibold">Unlimited:</span>                                 
+                              <span class="text-gray-500 flex gap-3">
+                                <img class="w-8" src="../images/facebook.png" alt="">
+                                <img class="w-8" src="../images/youtube.png" alt="">
+                              </span>
+                            </p>
+                       
+                    
+                          </div>
+                        </div>
+                        <div class="absolute bottom-0 w-full">
+                          <div class="text-gray-200 bg-secondary mx-10 py-1 text-center rounded-t-xl">
+                            <span class="font-bold text-h2"> 1000 </span>
+                            <span>Tk / Month</span>
+                          </div>
+                       
+                        
+                          <div data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="p-5 cursor-pointer bg-red-600 rounded-b-lg">
+                            <h2 class="text-h3 tracking-[.15em] text-center  text-white"> Select Standard</h2>
+                          </div>
+                    
+                        </div>
+                    </div>
+                    <!-- End packege -->
+                </div>
+            </li>
+            <li>
+
+                <div class="w-full h-full">
+                    <!-- Start Packege -->
+                    <div class="relative shadow-2xl rounded-lg bg-white">
+                      <div class="p-5">
+                        <h2 class="text-h2 my-2 border-b-[4px] border-amber-600 w-[120px] text-center mx-auto border-dashed text-amber-600 font-semibold ">30 Mbps</h2>
+                      </div>
+            
+                      <div class="px-5 pb-36">
+                          <div class="text-center">
+                            <p class="flex items-center gap-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>                                  
+                              <span class="text-gray-500">Multi-device streaming</span>
+                            </p>
+                            <p class="flex items-center gap-5 my-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>                                  
+                              <span class="text-gray-500">Download shows quickly</span>
+                            </p>
+                            <p class="flex items-center gap-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>                                  
+                              <span class="text-gray-500">Download large files</span>
+                            </p>
+                            <p class="flex items-center gap-5 my-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"/>
+                              </svg>  
+                              <span class="text-amber-600 font-semibold">Unlimited:</span>                                 
+                              <span class="text-gray-500 flex gap-3">
+                                <img class="w-8" src="../images/facebook.png" alt="">
+                                <img class="w-8" src="../images/youtube.png" alt="">
+                              </span>
+                            </p>
+                       
+                    
+                          </div>
+                        </div>
+                        <div class="absolute bottom-0 w-full">
+                          <div class="text-gray-200 bg-secondary mx-10 py-1 text-center rounded-t-xl">
+                            <span class="font-bold text-h2"> 1499 </span>
+                            <span>Tk / Month</span>
+                          </div>
+                       
+                        
+                          <div data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="p-5 cursor-pointer bg-amber-600 rounded-b-lg">
+                            <h2 class="text-h3 tracking-[.15em] text-center  text-white"> Select Premium</h2>
+                          </div>
+                       
+                        </div>
+                    </div>
+                    <!-- End Packege -->
+                </div>
+            </li>
           
-            </ul>
-          </div>
-         </div>
-         <div class="col-span-1">
-          <h1 class="text-xl font-semibold uppercase">legal</h1>
-          <div class="mt-5">
-            <ul>
-              <li class="my-2"><a href="#">Terms & Conditions</a></li>
-              <li class="my-2"><a href="#">Privacy Policy</a></li>
-              <li class="my-2"><a href="#">Return & Refund</a></li>
-              <li class="my-2"><a href="#">BTRC Approved Tarrif</a></li>
-            </ul>
-          </div>
+        </ul>
+    </div>
+    <!-- Indicators -->
+    <div class="flex items-center justify-center w-full gap-2" data-glide-el="controls[nav]">
+        <button class="p-4 group" data-glide-dir="=0" aria-label="goto slide 1"><span class="block w-2 h-2 transition-colors duration-300 rounded-full opacity-70 ring-1 ring-slate-700 focus:outline-none"></span></button>
+        <button class="p-4 group" data-glide-dir="=1" aria-label="goto slide 2"><span class="block w-2 h-2 transition-colors duration-300 rounded-full opacity-70 ring-1 ring-slate-700 focus:outline-none"></span></button>
+        <button class="p-4 group" data-glide-dir="=2" aria-label="goto slide 3"><span class="block w-2 h-2 transition-colors duration-300 rounded-full opacity-70 ring-1 ring-slate-700 focus:outline-none"></span></button>
+    </div>
+  </div>
+
+
+
+<!-- Main modal -->
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 ">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="px-6 py-6 lg:px-8">
+                <h3 class="mb-4 text-h2 font-semibold text-center text-secondary dark:text-white">Customer Registration Form </h3>
+                <form class="space-y-6" action="#">
+                  <div class="flex gap-5">
+                    <div class="relative  w-1/2">
+                      <input id="firstName" type="text" name="firstName" placeholder="First Name" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary" />
+                      <label for="firstName" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">
+                        First Name
+                      </label>
+                    </div>
+                    <div class="relative  w-1/2">
+                      <input id="lastName" type="text" name="lastName" placeholder="Last Name" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary" />
+                      <label for="lastName" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">
+                        Last Name
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex gap-5">
+                    <div class="relative  w-1/2">
+                      <input id="email" type="email" name="email" placeholder="Email Address" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary" />
+                      <label for="email" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">
+                        Email Address
+                      </label>
+                    </div>
+                    <div class="relative  w-1/2">
+                      <input id="phone" type="tel" name="phone" placeholder="Phone" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary" />
+                      <label for="phone" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">
+                        Phone
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex gap-5">
+                    <div class="relative  w-1/2">
+                      <label for="division" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">Division</label>
+                      <select id="division" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary">
+                        <option selected>Choose Your Division</option>
+                        
+                      </select>
+                    </div>
+                    <div class="relative  w-1/2">
+                      <label for="district" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">District</label>
+                      <select id="district" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary">
+                        <option selected>Choose Your District</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <div class="flex gap-5">
+                    <div class="relative  w-1/2">
+                      <label for="upazila" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">Upazila</label>
+                      <select id="upazila" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary">
+                        <option selected>Choose Your Upazila</option>
+                       
+                      </select>
+                    </div>
+                    <div class="relative  w-1/2">
+                      <label for="union" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">Union</label>
+                      <select id="union" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary">
+                        <option selected>Choose Your Union</option>
+                  
+                      </select>
+                    </div>
+                  </div>
+
+                
+                  <div class="relative">
+                    <input id="address" type="text" name="address" placeholder="Address/Road" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary" />
+                    <label for="address" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">
+                      Assress/Road
+                    </label>
+                  </div>
+               
+
+                  <div class="relative">
+                    <label for="Packege" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neutral-500 peer-invalid:peer-focus:text-pink-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent">Packege</label>
+                    <select id="Packege" class="relative w-full h-10 px-4 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-neutral-500 focus:outline-none invalid:focus:border-pink-500 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400 focus:border-0 focus:ring-2 focus:ring-primary">
+                      <option selected>Choose Your Packege</option>
+                      <option value="Basic">Basic</option>
+                      <option value="Standard">Standard</option>
+                      <option value="Premium">Premium</option>
+                    </select>
+                  </div>
+                   
+                    <button type="submit" class="w-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white rounded-lg font-semibold px-5 py-3 text-center ">Submit</button>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+  
+    </div>
+
+
+  </section>
+
+
+
+    
+    
+
+ <!-- information section -->
+
+ <div class="bg-background">
+  <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-6 items-center mx-auto max-w-7xl px-6 py-20">
+   <a href="./pages/howtopay.html">
+    <div class="rounded-xl shadow-md cursor-default">
+      <img class="rounded-t-xl w-full" src="./images/pay.gif" alt="">
+      <h2 class="bg-[#FCE7F3] rounded-b-xl text-h2 font-semibold text-center p-5">How to Pay?</h2>
+    </div>
+   </a>
+    <a href="./pages/coverage.html">
+      <div class="rounded-xl shadow-md cursor-default">
+        <img class="rounded-t-xl w-full" src="./images/coverage.gif" alt="">
+        <h2 class="bg-[#DCFCE7] rounded-b-xl text-h2 font-semibold text-center p-5">Coverage Area</h2>
+      </div>
+    </a>
+    <a href="./pages/self-care.html">
+      <div class="rounded-xl shadow-md cursor-default">
+        <img class="rounded-t-xl w-full" src="./images/selfcare.gif" alt="">
+        <h2 class="bg-[#E0E7FF] rounded-b-xl text-h2 font-semibold text-center p-5">ISP's Self Care</h2>
+      </div>
+    </a>
+    <a href="./pages/contact.html">
+      <div class="rounded-xl shadow-md cursor-default">
+        <img class="rounded-t-xl w-full" src="./images/contact.gif" alt="">
+        <h2 class="bg-[#FEF9C3] rounded-b-xl text-h2 font-semibold text-center p-5">Get in touch</h2>
+      </div>
+    </a>
+    
+  </div>
+</div>
+
+
+
+
+    
+
+<!-- happy client -->
+
+
+  <div class="mx-auto max-w-7xl px-6 py-20 ">  <!-- flex items-center justify-between -->
+    
+    <div class="text-center">
+      <h1 class="md:text-h1 text-2xl font-bold ">Happy Clients</h1>
+      <p class="text-third  font-medium md:text-h3 text-md my-5">Some of our happy clients using Dot's fastest internet.</p>
+    </div>
+
+    <!-- Component: Logos carousel -->
+<div class="relative overflow-hidden glide-09 pt-10">
+  <!-- Slides -->
+  <div data-glide-el="track">
+      <ul class="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
+          <li>
+            <img src="./images/1-asia.png" alt="Image 1" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/3-com.jpg" alt="Image 2" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/alvarion.png" alt="Image 3" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/apnic.jpg" alt="Image 4" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/BTCL_Logo.jpg" alt="Image 5" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/cambium-networks.png" alt="Image 6" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/cisco.png" alt="Image 7" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/earth1.png" alt="Image 8" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/GP.png" alt="Image 10" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+          <li>
+            <img src="./images/huawei-logo.png" alt="Image 11" class="w-auto h-14 max-w-full max-h-full m-auto " />
+          </li>
+      </ul>
+  </div>
+</div>
+    
+  </div>
+
+
+
+
+ <!-- Footer -->
+ <div class="bg-secondary text-white py-16">
+  <div class="mx-auto max-w-7xl px-6">
+     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+         <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div class="">
+              <h2 class="text-sm font-semibold text-white tracking-wider uppercase">Company</h2>
+              <div class="mt-5">
+                <ul role="list" class="mt-6 space-y-4">
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/about-us.html">About Us</a></li>
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/packeges.html">Pricing</a></li>
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/coverage.html">Coverage Area</a></li>
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/pay-bill.html">Bill Payment</a></li>
+                </ul>
+              </div>
+             </div>
+             <div class="mt-12 md:mt-0">
+              <h2 class="text-sm font-semibold text-white tracking-wider uppercase">support</h2>
+              <div class="mt-5">
+                <ul role="list" class="mt-6 space-y-4">
+
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/self-care.html">Self-care</a></li>
+                  
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/contact.html">Contact us</a></li>
+                </ul>
+              </div>
+             </div>
+           </div>
+           <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div class="col-span-1">
+              <h2 class="text-sm font-semibold text-white tracking-wider uppercase">quick links</h2>
+              <div class="mt-5">
+                <ul role="list" class="mt-6 space-y-4">
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="https://www.facebook.com/tihanonline/" target="_blank"
+                    >Join Group</a></li>
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="https://www.facebook.com/tihanonline/" target="_blank">Like our Page</a></li>
+              
+                </ul>
+              </div>
+             </div>
+             <div class="mt-12 md:mt-0">
+              <h2 class="text-sm font-semibold text-white tracking-wider uppercase">legal</h2>
+              <div class="mt-5">
+                <ul role="list" class="mt-6 space-y-4">
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/termandcondition.html">Terms & Conditions</a></li>
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/privacy-policy.html">Privacy Policy</a></li>
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="./pages/return-refund.html">Return & Refund</a></li>
+                  <li class="my-2"><a class="text-sm text-gray-200 hover:text-white" href="https://www.link3.net/BTRC_Approved_Tariff.pdf" target="_blank">BTRC Approved Tarrif</a></li>
+                </ul>
+              </div>
+             </div>
+           </div>
          </div>
          
-         <div class="col-span-2 my-5 md:my-0">
-          <h1 class="text-xl font-semibold uppercase">SUBSCRIBE TO OUR NEWSLETTER</h1>
+         <div class="mt-14 mb-14 lg:mt-0 lg:mb-0 xl:mt-0">
+          <h2 class="text-sm font-semibold text-white tracking-wider uppercase">SUBSCRIBE TO OUR NEWSLETTER</h1>
           <div class="mt-5">
-            <p>The latest news, articles, and resources, sent to your inbox weekly.</p>
+            <p class="text-sm text-gray-200 hover:text-white">The latest news, articles, and resources, sent to your inbox weekly.</p>
             
-              <form class="flex items-center mt-5">   
-                <div class="relative w-full">
-                    <input type="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your email" required>
-                </div>
-                <button type="submit" class="w-40 h-10 ml-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-900 rounded-lg">
-                    Subscribe
-                </button>
-              </form>
+              <form class="mt-8 sm:flex sm:max-w-md">
+                <label for="email-address" class="sr-only">Email address</label>
+                <input type="email" name="email-address" id="email-address"  required class="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-sm text-gray-900 placeholder-gray-500 focus:border-0 focus:ring-2 focus:ring-primary focus:placeholder-white" placeholder="Enter your email">
+                <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                  <button type="submit" class="lg:w-28 h-10 w-full rounded-md bg-primary hover:bg-third transition duration-700 ease-in-out text-white">Subscribe</button>
+              </div>
+            </form>
 
          </div>
-     </div>
+         </div>
   </div>
 
 
-  <div class="my-10 mb-14">
-    <img src="./images/sslcommerz-foo.webp" alt="">
+  <div class="mt-14">
+    <img src="../images/sslcommerz-foo.webp" alt="">
   </div>
 
-  <div class="flex md:flex-row gap-5 flex-col-reverse items-center justify-between bg-sky-400 p-6 rounded-xl">
+  <div class="flex md:flex-row gap-5 flex-col-reverse mt-12 items-center justify-between bg-third p-6 rounded-xl">
     <div>
-      <p>© Zealtech Internet <span id="currentYear"></span>. All rights reserved.</p>
+      <a href="https://www.zealtechbd.com/" target="_blank">
+      <p class="text-sm text-gray-200 hover:text-white text-center">© Copyright <span id="currentYear"></span> Tihan Online. | All Rights Reserved | Powered by ZealtechBD.</p>
+    </a>
     </div>
-    <div class="flex gap-1">
-      <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 512 512">
-          <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
-        </svg>
-      </a>
-      <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 512 512">
-          <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
-        </svg>
-      </a>
-      <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 448 512">
-          <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
-        </svg>
-      </a>
+    <div>
+      <ul class="flex gap-1">
+        <li>
+          <a href="https://www.facebook.com/tihanonline/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512">
+              <path class="fill-white  hover:fill-primary" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512">
+              <path class="fill-white  hover:fill-primary" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512">
+              <path class="fill-white  hover:fill-primary" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 
 
     </div>
-    <script src="/main.js"></script>
+
+
+    <!-- Javascript code stat -->
+    <!-- Add this to your HTML file to include Axios -->
+    <script src="../main.js"></script>
+   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+    
+
+<script>
+    var glide07 = new Glide('.glide-08', {
+        type: 'carousel',
+        focusAt: 1,
+        animationDuration: 4000,
+        autoplay: 4500,
+        autoplay: true,
+        rewind: true,
+        perView: 4,
+        gap: 25,
+        classes: {
+            activeNav: '[&>*]:bg-primary',
+        },
+        breakpoints: {
+            1170: {
+                perView: 3,
+                gap:30
+            },
+            830:{
+                perView: 2,
+                gap:50
+            },
+            650:{
+                perView: 2,
+                gap:10
+            },
+           560: {
+                perView: 1,
+                
+            }
+        },
+    });
+
+    glide07.mount();
+</script>
+<!-- End Testimonial carousel -->
+
+
+<script>
+  var glide09 = new Glide('.glide-09', {
+      type: 'carousel',
+      autoplay: 1,
+      animationDuration: 4500,
+      animationTimingFunc: 'linear',
+      perView: 7,
+      classes: {
+          activeNav: '[&>*]:bg-slate-700',
+      },
+      breakpoints: {
+          1024: {
+              perView: 5
+          },
+          640: {
+              perView: 3,
+              gap: 36
+          }
+      },
+  });
+
+  glide09.mount();
+</script>
+<!-- End Logos carousel -->
+
   </body>
 </html>

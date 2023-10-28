@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image" href="../images/favicon.webp" />
+  <title>Selfcare Login | ISP Website</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body  style="background-image: url('../images/isp-bg.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+  
+  <div class="flex h-screen items-center justify-center px-6 shadow-xl">
+    <div class="bg-white p-8 rounded-lg shadow-xl  md:w-[600px] w-full">
+        <h1 class="text-h1 font-semibold mb-6 text-center text-gray-700">Selfcare Login</h1>
+        <form>
+            <div class="mb-4">
+                <label for="customer-id" class="block  text-sm font-medium mb-2">Customer ID</label>
+                <input type="text" id="customer-id" name="customer-id" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-0 focus:ring-2 focus:ring-primary" placeholder="Enter your Customer ID" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block  text-sm font-medium mb-2">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none  focus:border-0 focus:ring-2 focus:ring-primary" placeholder="Enter your password" required>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center">
+                    <input type="checkbox" id="remember_me" name="remember_me" class="text-primary focus:outline-none focus:ring-0">
+                    <label for="remember_me" class=" text-sm ml-2">Remember me</label>
+                </div>
+                <a href="./forget-pass.html" class="text-primary text-sm font-semibold">Forgot Password?</a>
+            </div>
+            <button type="submit" class="w-full bg-primary hover:bg-secondary transition duration-700 ease-in-out text-white rounded-lg font-semibold px-5 py-3 text-center ">Login</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
